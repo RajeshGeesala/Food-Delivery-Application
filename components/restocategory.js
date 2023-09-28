@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Menuitems } from "./menuitems";
 
 export const RestoCat = (props) => {
@@ -13,11 +13,11 @@ export const RestoCat = (props) => {
                     SetShowItems(!ShowItems)
                 } }
             >
-                {data.title} -
-                <span > ({data.itemCards.length}) </span>
-                <span >   </span>
+                { data.title } -
+                <span > ({data.itemCards.length}) </span> 
+
             </h4>
-            <h4 className="menuname">  { ShowItems &&<Menuitems  items={data.itemCards} /> } </h4>
+            <h4 className="menuname">  {  ShowItems && <Menuitems  items= {data.itemCards} /> } </h4>
         </div>
     )
 }

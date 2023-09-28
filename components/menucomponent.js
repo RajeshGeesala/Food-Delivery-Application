@@ -56,7 +56,7 @@ export const MenuComponent = () => {
                }
           </ul>  */}
             { 
-            CatName.map( (cat) =>   (  <RestoCat data = {cat.card.card}/>)) }
+            CatName.map( (cat) =>   (   <RestoCat data = {cat.card.card}/>)) }
 
      </div>)
 }

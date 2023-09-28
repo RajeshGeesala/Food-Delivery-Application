@@ -8,17 +8,18 @@ import { createBrowserRouter ,RouterProvider , Outlet }  from "react-router-dom"
 import { AboutUs } from "../components/aboutus";
 import { Error } from "../components/error";
 import { FooteerComponent  }  from "../components/footer";
-
+import { AppStore } from "../utilities/AppStore";
 import { TopOffers } from "../components/topoffers"; 
 import { MenuComponent } from "../components/menucomponent";
-
+import { Provider } from "react-redux";
 
 const GlobalComponent = ( ) => {
     return <div className="container-fluid">
+      <Provider store={AppStore} >
            <HeaderComponent/> 
                 <Outlet/> 
            <FooteerComponent/>
-                   </div>
+           </Provider>    </div>
  } ;
  
 //  const AppRouter = createBrowserRouter([
