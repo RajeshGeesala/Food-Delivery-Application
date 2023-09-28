@@ -1,13 +1,13 @@
 export const Menuitems = ({ items }) => {
  
-   return (<div className="container">
+   return (<div className="container menu-items">
       <ul className="list-group">
          {/* normal type of renderimg  */}
          {/* <li className="list-group-item">
         {   items.map((itemnames )=> ( itemnames.card.info.name)) } </li> */}
 
          {items.map((item) =>
-            <li className="list-group-item">  <span> {item.card.info.name}     </span>
+            <li className="list-group-item menu-items">  <span> {item.card.info.name}     </span>
              <center className="ms-5" > Price  : {item.card.info.price /100} </center>
                {/* <p>Description{item.card.info.description }</p> */}
                <div className="ms-auto">

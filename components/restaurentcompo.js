@@ -21,7 +21,7 @@ export const HOFOfFreeDelivery = (RestaurentComponent) =>
 {
  return ( props ) =>  {
    return    ( <div className="freelabel-div">
-    <h5 className="text-white freelabel">Free Delivery</h5>
+    <h5 className="text-white freelabel" >Free Delivery</h5>
      <RestaurentComponent {...props} />
    </div>)
  }

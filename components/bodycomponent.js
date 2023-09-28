@@ -1749,7 +1749,7 @@ export const Bodycomponent = () => {
     <div className="row"> {
       RestaurentData.map((details) => (
         <div className="col mt-5">
-          <Link to={"menu/" + details.id} className="text-white">
+          <Link to={"menu/" + details.id} className="text-white underline">
             {/* hof function for label */}
             {details.freeDelivery ? <FreeLAbel d={details} /> : <RestaurentComponent d={details} />}
           </Link> </div>

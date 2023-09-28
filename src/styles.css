@@ -1,13 +1,15 @@
- * {
+ /* * {
   box-sizing: border-box; 
-  margin: 0 ;
-  padding: 0; 
- }  
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+ }   */
 
 
 body {
   
-  background-color: dimgray;
+  
+  background:radial-gradient(#9a969e ,#52395a);
 }
 
 .logoimg {
@@ -18,8 +20,10 @@ body {
 }
 
 .navbar {
-  background-color: orangered ;
+  /* background-color: orangered ; */
+   background: linear-gradient(#18181a,  #2c2c2c ) ;
   height: 60px;
+  /* border: 1.5px solid black; */
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 20px;
@@ -41,20 +45,33 @@ body {
 }
 
 .nav-link:hover {
-  color: rgb(15, 15, 15);
+  color: rgb(234, 227, 227);
 }
 
 .name {
-  color: black ;
-  font-family :Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(254, 249, 249) ;
+  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: inline;
   margin-left: 20px;
   position: relative;
   top: 5px
 }
-
+.card-header , .card-footer{
+  background: linear-gradient(#1c1919, #323130 )  ;
+  color: white;
+  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}  
+/* .card-footer {
+  background: linear-gradient(#d2590e, #54547d )  ;
+  color: white;
+font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+.card-title {
+  color: white;
+  text-decoration: none;
+}
 .search {
-  background-color: orangered;
+    background: linear-gradient(#0f0e0e, #2d2d43 ) ;
   color: aliceblue;
 }
 
@@ -103,8 +120,9 @@ body {
 }
 
 .title {
-  color: rgb(18, 12, 10);
-  text-decoration: none;
+  color :rgb(251, 242, 242) ;
+  text-decoration : none ;
+  border: 5px ;
 }
 
 .shimmercard {
@@ -122,12 +140,13 @@ body {
 }
 
 .loginButton {
-  color: #ece0dc
+  color: #543ed3
 }
 
 .footer {
+  background: linear-gradient(#09090a, #2c2c2c ) ;
   height: 50px;
-  background-color : orangered;
+
   color: aliceblue;
   text-align: center;
 }
@@ -143,13 +162,14 @@ body {
 } 
 
 .freelabel {
-  background-color:  orangered;
+  background: linear-gradient(#141414, #100f11 );
+   /* background-color: black ; */
   border-radius: 5px;
-  text-decoration: none;
+    text-decoration: none;
 }
 .AddToCartButton {
   
-   background-color: orangered;
+  background: linear-gradient(#0f0e0e, #2d2d43 ) ;
    color: #ffffff;
  
 }
@@ -165,6 +185,7 @@ body {
 }  
 .category {
    border: 2px solid rgb(173, 166, 166);
+   background: linear-gradient(#0f0e0e, #2d2d43 ) ;
    border-radius: 5px;
    padding: 10px 10px;
   
@@ -178,3 +199,17 @@ body {
   font-size: larger;
 
 }
+h5 {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: none;
+} 
+
+.menu {
+  background:radial-gradient(#9a969e ,#52395a); 
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+} 

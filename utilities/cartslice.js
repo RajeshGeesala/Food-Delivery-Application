@@ -1,39 +1,26 @@
-// import { createSlice } from "@reduxjs/toolkit";
-
 import { createSlice } from "@reduxjs/toolkit";
 
-// const CartSlice = createSlice(
-//     {
-//         name : "cart" ,
-//         initialState : {
-//             items : [] ,
-//         } ,
-//        reducers :
-//        {
-//         AddItems : (state , action) => {
-//             state.items.push(action.payload)
-//         } ,
-//         ClearItems :  (state , action) => {
-//             state.items.length == 0
-//         }
 
-//        }
-//     } 
-// )
-
-
-const CartSlice  =  createSlice({
-    name : "cart " ,
-
-     initialState : {
-        items : []
-     } ,
-     reducers : {
-        AddItems : ( state ,action) => {
-        state.items.push(action.payload)
+const CartSlice = createSlice(
+    {
+        name : "cart" ,
+        initialState : {
+            items : [] ,
         } ,
-        ClearCart : ( state ,action ) => {
-            state.items.length  == 0
+       reducers :
+       {
+        AddItems : (state , action) => {
+            state.items.push(action.payload)
+        } ,
+        ClearItems :  (state , action) => {
+            state.items.length == 0
         }
-     }
-})
+
+       }
+    } 
+)
+
+//exporting actions by destructuring : 
+
+export const { AddItems ,ClearItems} = CartSlice.actions
+

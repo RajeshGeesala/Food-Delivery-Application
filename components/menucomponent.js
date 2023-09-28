@@ -44,8 +44,8 @@ export const MenuComponent = () => {
      const MenuNAmes = HAveMenuName ? HAveMenuName : [ ] 
      // this is formal way of rendering
      //  let {name} = RestoMenu?.data?.cards[0]?.card?.card?.info
-     return (<div className="bg-white container">
-           <center>  <h2> {Name}</h2>
+     return (<div className=" container menu">
+           <center className="menumain">  <h2> {Name}</h2>
           <h4> City :{CItyname}</h4>
           <h5>Area : {AreaNAme}</h5>
            
