@@ -31,7 +31,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #1d1b1a;
+  color: #f05c11;
   background-color: rgb(222, 222, 204);
   border-radius: 5px;
 }
@@ -44,8 +44,9 @@ body {
   
 }
 
-.nav-link:hover {
-  color: rgb(234, 227, 227);
+
+.nav-link:visited{
+  color: rgb(214, 201, 201);
 }
 
 .name {
@@ -59,6 +60,7 @@ body {
 .card-header , .card-footer{
   background: linear-gradient(#1c1919, #323130 )  ;
   color: white;
+  border-radius: 10px;
   font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }  
 /* .card-footer {
@@ -213,3 +215,32 @@ h5 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 } 
+.menu-items {
+  background-color: #6c6c71;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  font-size: larger;
+} 
+
+.carttext{
+  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(246, 239, 238);
+background: linear-gradient(   rgb(48, 48, 58), rgb(20, 20, 20) );
+  padding-top: 100px;
+  margin: 100px 100px;
+  border-radius: 25px;
+}
+.clickheretohome {
+  color :rgb(202, 24, 24);
+  background-color: rgb(193, 183, 183);
+  text-decoration: none;
+  margin-top: 550px;
+
+}
+.btndiv {
+  margin-top: 100px;
+}
+.clearcart {
+  margin: 50px 50px;
+}

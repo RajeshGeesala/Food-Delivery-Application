@@ -8,33 +8,24 @@ import { createBrowserRouter ,RouterProvider , Outlet }  from "react-router-dom"
 import { AboutUs } from "../components/aboutus";
 import { Error } from "../components/error";
 import { FooteerComponent  }  from "../components/footer";
-import { AppStore } from "../utilities/AppStore";
+
 import { TopOffers } from "../components/topoffers"; 
 import { MenuComponent } from "../components/menucomponent";
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"
+import AppStore from "../utilities/AppStore";
+import CartComponent from "../components/cart";
+
 
 const GlobalComponent = ( ) => {
-    return <div className="container-fluid">
-      <Provider store={AppStore} >
+    return <div className="container-fluid">   
+           <Provider store={AppStore}>
            <HeaderComponent/> 
                 <Outlet/> 
-           <FooteerComponent/>
-           </Provider>    </div>
+           <FooteerComponent/> 
+           </Provider>
+               </div>
  } ;
  
-//  const AppRouter = createBrowserRouter([
-//     {
-//         path : "/",
-//         element : <GlobalComponent/>,
-//         errorElement :  <Error/> ,
-//     } ,
-//     {
-//         path : "about" ,
-//         element : <AboutUs/> ,
-      
-//     }  ,
-  
-//  ]) 
 
 const AppRouterWithOutlet = createBrowserRouter ([
     {
@@ -58,7 +49,11 @@ const AppRouterWithOutlet = createBrowserRouter ([
             {
                path : "/menu/:restoid" , 
                element : <MenuComponent/>
-            }
+            } ,
+          {
+            path : "/cart" ,
+            element : <CartComponent/>
+          }
          
          ] ,
          errorElement : <Error/> ,

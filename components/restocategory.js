@@ -17,7 +17,7 @@ export const RestoCat = (props) => {
                 <span > ({data.itemCards.length}) </span> 
 
             </h4>
-            <h4 className="menuname">  {  ShowItems && <Menuitems  items= {data.itemCards} /> } </h4>
+            <h4 className="menuname">  {  ShowItems && <Menuitems  items = {data.itemCards} /> } </h4>
         </div>
     )
 }

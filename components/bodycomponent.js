@@ -5,16 +5,21 @@ import { Link } from "react-router-dom";
 //import { RestaurentData } from "../utilities/RestaurebtData" ; 
 export const Bodycomponent = () => {
 
-  console.log('rendered')
+  // console.log('rendered')
 
-            
-  const [Resdata1, FilterAvil] = useState([]);
 
-  const [RestaurentData, FilterD] = useState([]);
+    
+   // useState for All restaurents 
+ 
+    const [RestaurentData ,SetRestaurentData]   = useState( [])
+  
+       const [TopRatedRes , SetTopRatedRes] = useState([])  ;
 
-  const [REsdata2, FilterIceCream] = useState([]);
+       const [Resdata1, FilterAvil] = useState([]);
 
-  const FreeLAbel = HOFOfFreeDelivery(RestaurentComponent)
+     const [REsdata2, FilterIceCream] = useState([]);
+
+      const FreeLAbel = HOFOfFreeDelivery(RestaurentComponent)
 
   //USESTATE  FOR  SEARCH DATA
 
@@ -29,7 +34,7 @@ export const Bodycomponent = () => {
 
   const FirstAPi = async () => {
     const APIDAta = await fetch(" https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3730432&lng=78.4260555&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-    const REstApiData = await APIDAta;
+    // const REstApiData = await APIDAta;
     // let ApiRES = REstApiData.formData.cards[2].card.card.gridElements.infoWithStyle.restaurants ;
     // let  us store api data manually bcoz swigggy data is difficult to read
     let ApiStaticJsonData = [
@@ -1686,10 +1691,11 @@ export const Bodycomponent = () => {
       }
     ];
     FilterAvil(ApiStaticJsonData)
-
-    FilterD(ApiStaticJsonData);
+     SetRestaurentData(ApiStaticJsonData)
+    // FilterD(ApiStaticJsonData);
     FilterIceCream(ApiStaticJsonData);
-    //   SetSearch(ApiStaticJsonData);                      
+    //   SetSearch(ApiStaticJsonData);    
+    SetTopRatedRes(ApiStaticJsonData) ;               
   };
 
 
@@ -1703,8 +1709,8 @@ export const Bodycomponent = () => {
       <div className="col">
         <button className="btn filterbutton col-md-6"
           onClick={() => {
-            const TopRated = RestaurentData.filter((filtR) => filtR.avgRating >= 4.5);
-            FilterD(TopRated);
+            const TopRated = TopRatedRes.filter((filtR) => filtR.avgRating >= 4.5);
+            SetRestaurentData(TopRated);
             console.log(TopRated)
           }}>Click here for Top Rated Restaurents</button>
       </div>
@@ -1712,9 +1718,8 @@ export const Bodycomponent = () => {
         <button className="btn filterbutton col-md-6"
           onClick={() => {
             const availablehotels = Resdata1.filter((filtO) => filtO.isOpen == true);
-
-            FilterAvil(availablehotels);
-            console.log(availablehotels);
+               SetRestaurentData(availablehotels);
+               console.log(availablehotels);
 
           }}> Hotels Available Now</button>
       </div>
@@ -1722,28 +1727,26 @@ export const Bodycomponent = () => {
         <div className="col">
           <button className="btn filterbutton"
             onClick={() => {
-              let IceCreamParlours = REsdata2.filter((filtI) => filtI.veg == true);
-              FilterIceCream(IceCreamParlours);
+              const IceCreamParlours = REsdata2.filter((filtI) => filtI.veg == true);
+              SetRestaurentData(IceCreamParlours);
               console.log(IceCreamParlours)
             }}> CLick here to Order ICe Creams</button>  </div>
         <center className="col searchcol">
-          <input type="search" 
+          <input type="search"
             value={SEARCH} placeholder="search your fav restaurents here"
             onChange={(e) => {
               SetSearch(e.target.value)
-            }} />
-          <button className="btn search" onClick={
+             }} />
+           <button className="btn search" onClick={
             () => {
               let SearchFood = RestaurentData.filter((s) => s.cuisines.includes(SEARCH));
-                  FilterD(SearchFood);
+              SetRestaurentData(SearchFood);
               console.log(SearchFood);
-            }}>
+            }}> 
             SEARCH
-          </button>
+          </button> 
         </center>
       </div>
-
-
     </div>
 
     <div className="row"> {
@@ -1752,11 +1755,12 @@ export const Bodycomponent = () => {
           <Link to={"menu/" + details.id} className="text-white underline">
             {/* hof function for label */}
             {details.freeDelivery ? <FreeLAbel d={details} /> : <RestaurentComponent d={details} />}
-          </Link> </div>
+          </Link>
+        </div>
       ))
     }
     </div>
   </div>
-
+    
   )
 }
