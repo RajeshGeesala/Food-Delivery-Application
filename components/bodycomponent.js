@@ -1754,7 +1754,8 @@ export const Bodycomponent = () => {
         <div className="col mt-5">
           <Link to={"menu/" + details.id} className="text-white underline">
             {/* hof function for label */}
-            {details.freeDelivery ? <FreeLAbel d={details} /> : <RestaurentComponent d={details} />}
+            {/* {details.freeDelivery ?     <RestaurentComponent  d={details} />  : <FreeLAbel d={details} />} */}
+            <RestaurentComponent  d={details} />    
           </Link>
         </div>
       ))
