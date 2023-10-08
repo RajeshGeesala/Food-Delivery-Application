@@ -76,7 +76,7 @@ body {
 .card {
   height: 280px;
   width: 200px; 
-   margin-left: 60px; 
+   /* margin-left: 60px;  */
 }
 
 .RstImg {
