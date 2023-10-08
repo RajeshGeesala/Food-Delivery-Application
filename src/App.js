@@ -17,7 +17,7 @@ import CartComponent from "../components/cart";
 
 
 const GlobalComponent = ( ) => {
-    return <div className="container-fluid">   
+    return <div >   
            <Provider store={AppStore}>
            <HeaderComponent/> 
                 <Outlet/> 

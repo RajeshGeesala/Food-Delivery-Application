@@ -13,7 +13,7 @@ export const Menuitems = ({ items }) =>
    } ;
     
 
-   return (<div className="container menu-items">
+   return (<div className="container-fluid menu-items">
       <ul className="list-group">
         
        {items.map((item) =>
