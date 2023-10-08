@@ -8,9 +8,12 @@ export const RestaurentComponent = (props) => {
       <div className="card"> <div className="card-header"><div className="cardtitle"> <p className="title"> {d.name} </p> </div>
       </div><div className="card-body"> <img className="RstImg" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + d.cloudinaryImageId} />
           <div className="ratingd">{d.avgRating}<span className="rating">⭐ Avg Rating</span></div> </div>
-        {/* <div className="card-footer">  <span><h6>{d.cuisines.join(" ,")} </h6> </span> */}
+         {/* <div className="card-footer">  <span><h6>{d.cuisines.join(" ,")} </h6> </span>  */}
+         {
+              < HOFOfFreeDelivery  {...props} />
+         }
           {/* <button className="btn ExpBut">View Menu</button>  */}
-        {/* </div> */}
+         {/* </div> */}
       </div>
     </div>
   </div>
@@ -18,9 +21,9 @@ export const RestaurentComponent = (props) => {
 
 export const HOFOfFreeDelivery = (RestaurentComponent) => {
   return (props) => {
-    return (<div className="freelabel-div">
-      <h5 className="text-white freelabel" >Free Delivery</h5>
+    return (<div className="freelabel-div"> 
       <RestaurentComponent {...props} />
-    </div>)
+    <center>  <h6 className="freelabel" >Free Delivery Available</h6></center>
+    </div>) 
   }
 }
