@@ -9,9 +9,6 @@ export const RestaurentComponent = (props) => {
       </div><div className="card-body"> <img className="RstImg" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + d.cloudinaryImageId} />
           <div className="ratingd">{d.avgRating}<span className="rating">⭐ Avg Rating</span></div> </div>
          {/* <div className="card-footer">  <span><h6>{d.cuisines.join(" ,")} </h6> </span>  */}
-         {
-              < HOFOfFreeDelivery  {...props} />
-         }
           {/* <button className="btn ExpBut">View Menu</button>  */}
          {/* </div> */}
       </div>
