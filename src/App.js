@@ -12,7 +12,8 @@ import { FooteerComponent  }  from "../components/footer";
 import { TopOffers } from "../components/topoffers"; 
 import { MenuComponent } from "../components/menucomponent";
 import { Provider } from "react-redux"
-import AppStore from "../utilities/AppStore";
+   //connection redux global store  by ussing provider 
+import AppStore from "../utilities/appStore";
 import CartComponent from "../components/cart";
 
 
