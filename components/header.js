@@ -15,14 +15,16 @@ export const HeaderComponent = () => {
      //  console.log(cartitems) ;
 
      return (
-          <div className="navbar navbar-expand-md">
+
+          <div className="navbar navbar-expand-lg">
+               <div className="container">
                <div className="navbar-brand"> <img src="https://static.vecteezy.com/system/resources/previews/007/500/121/non_2x/food-delivery-icon-clip-art-logo-simple-illustration-free-vector.jpg"
                     className="logoimg" ></img> <h3 className="name">Food Box</h3></div>
-               <h5 className="text-white"> {LoggedUser.name}</h5>
-               <button className="navbar-toggler"
-                    data-bs-toggle="collapse" data-bs-target="#naaav" >   <span className="navbar-toggler-icon text-white b-dark"></span></button>
-               <div className="collapse navbar-collapse" id="naaav">
-                    <ul className="navbar-nav ms-auto me-5" >
+               <h5 className="text-white"> {LoggedUser.name} </h5>
+               <button className="navbar-toggler bg-white"   data-bs-toggle="collapse" data-bs-target="#naaav" > <span className="navbar-toggler-icon text-white b-dark"></span>
+               </button>
+               <div className="collapse navbar-collapse bg-dark" id="naaav">
+                    <ul className="navbar-nav ms-auto me-5 " >
                          <li className="nav-item"> <a> <Link className="nav-link " to="/"> Home  </Link> </a></li>
                          <li className="nav-item"> <a><Link className="nav-link " to="/about"> About Us </Link> </a></li>
                          <li className="nav-item"> <Link className="nav-link " to="/topoffers"> TopOffers </Link></li>
@@ -32,6 +34,7 @@ export const HeaderComponent = () => {
                          Btnmae === "LOGIN" ? CngBtname("LOGOUT") : CngBtname("LOGIN")
                     }}  > {Btnmae} </button>
                     {/* login button */}
+               </div>
                </div>
           </div>)
 

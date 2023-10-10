@@ -8,12 +8,12 @@
 
 body {
   
-  background-color: #5c465c ;
+  background-color: #8d927c ;
   /* background:radial-gradient(#9a969e ,#52395a); */
 }
 
 .logoimg {
-  height: 50px;
+  height:50px;
   width: 100px;
   margin-left: 30px;
   border-radius: 5px; 
@@ -22,7 +22,7 @@ body {
 .navbar {
   /* background-color: orangered ; */
    background: linear-gradient(#18181a,  #2c2c2c ) ;
-  height: 60px;
+  height: 80px;
   /* border: 1.5px solid black; */
   padding-top: 15px;
   padding-bottom: 15px;
@@ -66,6 +66,7 @@ body {
   color: rgb(19, 14, 14);
   text-decoration: none;
 }
+
 .search {
     background: linear-gradient(#0f0e0e, #2d2d43 ) ;
   color: aliceblue;
@@ -77,6 +78,10 @@ body {
   height: 250px;
   width: 200px; 
     margin-left: 60px;  
+}
+.card:hover{
+  background: linear-gradient(#1e1414, #818193 ) ;
+  transition-delay: 0.4s;
 }
 
 .RstImg {
