@@ -1732,18 +1732,18 @@ export const Bodycomponent = () => {
               console.log(IceCreamParlours)
             }}> CLick here to Order ICe Creams</button>  </div>
         <center className="col searchcol">
-          <input type="search"
-            value={SEARCH} placeholder="search your fav restaurents here"
+          <input type="search" className="inputsearch"
+            value={SEARCH} placeholder="search your fav food"
             onChange={(e) => {
               SetSearch(e.target.value)
              }} />
            <button className="btn search" onClick={
             () => {
-              let SearchFood = RestaurentData.filter((s) => s.cuisines.includes(SEARCH));
-              SetRestaurentData(SearchFood);
-              console.log(SearchFood);
+               let SearchFood = RestaurentData.filter((s) => s.cuisines.includes(SEARCH));
+               SetRestaurentData(SearchFood);
+               console.log(SearchFood);
             }}> 
-            SEARCH
+            SEARCH 
           </button> 
         </center>
       </div>

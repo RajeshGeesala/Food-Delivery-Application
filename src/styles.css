@@ -54,16 +54,16 @@ body {
   font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: inline;
 }
-.card-header , .card-footer  {
+/* .card-header , .card-footer  {
   background: linear-gradient(#1c1919, #323130 )  ;
   height :80px;
   color: white;
   border-radius: 10px;
   font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}  
+}   */
  
 .card-title {
-  color: white;
+  color: rgb(19, 14, 14);
   text-decoration: none;
 }
 .search {
@@ -74,14 +74,14 @@ body {
 
 
 .card {
-  height: 280px;
+  height: 250px;
   width: 200px; 
-   /* margin-left: 60px;  */
+    margin-left: 60px;  
 }
 
 .RstImg {
-  height: 120px;
-  width: 150px;
+  height: 130px;
+  width: 100%;
 }
 
 .ExpBut {
@@ -93,8 +93,11 @@ body {
 .rating,
 .ratingd {
 
-  color: #cc481d;
+  color: #100602;
   font-weight: 600;
+}
+.inputsearch {
+  margin-right: 20px;
 }
 
 .filterbutton {
