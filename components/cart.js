@@ -3,10 +3,12 @@ import { Menuitems } from "./menuitems";
 import { Link } from "react-router-dom";
 import { ClearCart } from "../utilities/cartslice";
 const CartComponent = () => {
-    const clearcart = useDispatch();
-    const HAndelClearCart = () => { clearcart(ClearCart()) }
-    const HaveItems = useSelector((store) => store?.cart?.items);
-    const Cartitems = HaveItems ? HaveItems : []
+                // dispatch (action)for clearing cart items
+    const clearcartdispatch = useDispatch();
+    const HAndelClearCart = () =>  { clearcartdispatch(ClearCart()) }
+             // using selector to display items in cart 
+    const HaveItems = useSelector((store)  =>  store?.cart?.items); 
+    const Cartitems = HaveItems ? HaveItems : []    
     // console.log(Cartitems);
 
      
@@ -15,7 +17,7 @@ const CartComponent = () => {
             <Menuitems items={Cartitems}></Menuitems>
             {
                 Cartitems.length == 0 ? <center className="carttext">
-                    <h2>
+                    <h2>           
                         Your Cart is <b style={{ color: "red" }}>Empty! </b>
                         Please Add Items To Your Cart
                     </h2>

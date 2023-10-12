@@ -12,6 +12,7 @@ body {
   /* background:radial-gradient(#9a969e ,#52395a); */
 }
 
+
 .logoimg {
   height:50px;
   width: 100px;
@@ -74,13 +75,14 @@ body {
 
 
 
+
 .card {
   height: 250px;
   width: 200px; 
     margin-left: 60px;  
 }
 .card:hover{
-  background: linear-gradient(#1e1414, #818193 ) ;
+  background: linear-gradient(#d5f537, #d0f16d ) ;
   transition-delay: 0.4s;
 }
 
