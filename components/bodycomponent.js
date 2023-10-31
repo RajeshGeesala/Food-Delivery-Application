@@ -33,7 +33,7 @@ export const Bodycomponent = () => {
   }, []);
 
   const FirstAPi = async () => {
-    const APIDAta = await fetch(" https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3730432&lng=78.4260555&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const APIDAta = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.3730432&lng=78.4260555&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     // const REstApiData = await APIDAta;
     // let ApiRES = REstApiData.formData.cards[2].card.card.gridElements.infoWithStyle.restaurants ;
     // let  us store api data manually bcoz swigggy data is difficult to read

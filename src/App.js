@@ -41,7 +41,6 @@ const AppRouterWithOutlet = createBrowserRouter ([
             path : "/about" ,
             element : <AboutUs/>
              } ,
-       
           {
             path : "/topoffers" ,
             element : <TopOffers/>

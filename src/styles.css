@@ -82,7 +82,7 @@ body {
     margin-left: 60px;  
 }
 .card:hover{
-  background: linear-gradient(#d5f537, #d0f16d ) ;
+  background: linear-gradient(#686865, #545453 ) ;
   transition-delay: 0.4s;
 }
 
